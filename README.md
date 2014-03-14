@@ -1,6 +1,6 @@
 #Schema
 
-![](http://i.imgur.com/vmglmkG.jpg)
+![](http://i.imgur.com/nce9zm4.png)
 
 
 ```xml
@@ -39,7 +39,7 @@
     <type label="SET" length="1" sql="SET" quote=""/>
     <type label="Bit" length="0" sql="bit" quote=""/>
   </group>
-</datatypes><table x="38" y="75" name="decks">
+</datatypes><table x="38" y="51" name="decks">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -50,7 +50,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="201" y="71" name="cards">
+<table x="98" y="327" name="cards">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -68,7 +68,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="490" y="60" name="users">
+<table x="671" y="227" name="users">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -85,17 +85,18 @@
 <part>id</part>
 </key>
 </table>
-<table x="620" y="213" name="rounds">
+<table x="489" y="43" name="rounds">
 <row name="id" null="1" autoincrement="1">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="deck_id" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default><relation table="decks" row="id" />
+</row>
+<row name="user_id" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
 <default>NULL</default><relation table="users" row="id" />
 </row>
-<row name="deck_id" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default></row>
-<row name="user_id" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default></row>
 <row name="score" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -103,7 +104,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="280" y="231" name="user_guesses">
+<table x="280" y="221" name="user_guesses">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -129,6 +130,7 @@
 </sql>
 
 
+
 ```
 
 
@@ -138,16 +140,16 @@
 
 
 
-# Web Flash Cards 1 Multiple Decks 
- 
-##Learning Competencies 
+# Web Flash Cards 1 Multiple Decks
+
+##Learning Competencies
 
 - Manage application complexity via proper modeling.
 - Use project management fundamentals, including division of labor.
 - Use product management fundamentals in the face of incomplete specifications.
 - Further practice with ActiveRecord, Sinatra, and ERB.
 
-##Summary 
+##Summary
 
 We're going to create a web-based flash card application, starting with one that has a single deck.  Eventually we'll add support for user-generated decks and improve the interface via AJAX.
 
@@ -196,7 +198,7 @@ When a user is done they should be redirected to a page that shows a list of all
 ###Release 3 : Testing
 If you haven't been writing tests as you go, or even better using TDD, then now is the time to add them.  You should have ample test coverage of your model and controller.  If you want you can explore testing of your views as well.
 
-##Optimize Your Learning 
+##Optimize Your Learning
 This project is as much about project management and team dynamics as it is about the code.  What skills / lessons did you learn from working with a team?  How will you work better next time?
 
 ##Resources
