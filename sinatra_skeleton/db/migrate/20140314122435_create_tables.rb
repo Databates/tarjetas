@@ -16,7 +16,6 @@ class CreateTables < ActiveRecord::Migration
 
 
     create_table :cards do |t|
-      t.string :name
       t.string :question
       t.string :answer
       t.integer :deck_id
@@ -27,7 +26,7 @@ class CreateTables < ActiveRecord::Migration
     create_table :rounds do |t|
       t.integer :user_id
       t.integer :deck_id
-      t.integer :score { default: 0 }
+      t.integer :score, 0
 
       t.timestamps
     end
