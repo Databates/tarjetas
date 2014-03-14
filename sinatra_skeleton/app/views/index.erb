@@ -1,7 +1,19 @@
-<div class="container">
-  <h1>Welcome to Sinatra!</h1>
-  <p>Hello, world!</p>
+<div class="decks" >
+  <form name="buttons" action="/:deck" method="get">
+    <input type="submit" name="state capitals" value="State Capitals">
+    <input type="submit" name="know your boot" value="Know your Boot">
+    <input type="submit" name="spanish/english" value="Spanish / English">
+  </form>
+</div>
 
-<p><%= @decks.name %></p>
+
+<div class="signin">
+  <form class="buttons" name="signin" action="/" method="post">
+      <input type="submit" name="sign in" value="Sign In">
+      <input type="submit" name="sign up" value="Sign Up">
+  </form>
 
 </div>
+
+<!-- deck_id = Deck.where(name: param[:name]).id
+Card.find_by(deck_id) -->
