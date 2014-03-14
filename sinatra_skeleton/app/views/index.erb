@@ -1,23 +1,17 @@
-<div class="container">
-  <h1>Welcome to Sinatra!</h1>
-  <p>Hello, world!</p>
-
-  <table>
-    <tr>
-      <th>File Description</th>
-      <th>File Location</th>
-    </tr>
-    <tr>
-      <td>This view file</td>
-      <td><code><%= __FILE__.gsub(Sinatra::Application.root, '') %></code></td>
-    </tr>
-    <tr>
-      <td>The layout file</td>
-      <td><code><%= File.expand_path('../layout.erb', __FILE__).gsub(Sinatra::Application.root, '') %></code></td>
-    </tr>
-    <tr>
-      <td>The current controller</td>
-      <td><code><%= File.expand_path('../../controllers/index.rb', __FILE__).gsub(Sinatra::Application.root, '') %></code></td>
-    </tr>
-  </table>
+<div class="decks" >
+  <form name="buttons" action="/:deck" method="get">
+    <input type="submit" name="state capitals" value="State Capitals">
+    <input type="submit" name="know your boot" value="Know your Boot">
+    <input type="submit" name="spanish/english" value="Spanish / English">
+  </form>
 </div>
+
+<div class="signin">
+  <form class="buttons" name="signin" action="/" method="post">
+      <input type="submit" name="sign in" value="Sign In">
+      <input type="submit" name="sign up" value="Sign Up">
+  </form>
+</div>
+
+<!-- deck_id = Deck.where(name: param[:name]).id
+Card.find_by(deck_id) -->
