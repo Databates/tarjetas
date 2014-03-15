@@ -5,19 +5,10 @@ get '/' do
   erb :index
 end
 
-<<<<<<< HEAD
-post "/round" do
-  @deck_id = Deck.find_by_name(params[:name]).id
-  @cards = Card.where(deck_id: @deck_id)
-  return @cards.first.question
-  erb :round
-end
-=======
 # jquery routing ---- user login
 
 
 
-#
 
 #send card to module
   get '/send_card' do
@@ -50,4 +41,3 @@ end
 
 
 
->>>>>>> 9f3cfb982d557769a82d1df14de9e87fbde8e672
