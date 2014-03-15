@@ -8,7 +8,12 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
   </head>
   <body>
-    <div class="header"></div>
+    <div class="header">
+      <div class="container">
+        <div class="logo">Flashr</div>
+        <%= erb :_signin %>
+      </div>
+    </div>
     <%= yield %>
   </body>
 </html>

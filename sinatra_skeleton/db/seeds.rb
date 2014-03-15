@@ -11,5 +11,5 @@ module Parser
   end
 end
 
-Parser.parse('state_capitals.csv', "state_capitals")
+Parser.parse('state_capitals.csv', "State Capitals")
 

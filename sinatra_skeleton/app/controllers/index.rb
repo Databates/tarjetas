@@ -1,5 +1,4 @@
 enable :sessions
-exi
 # http://www.sinatrarb.com/faq.html#sessions
 get '/' do
   # @decks = Deck.all
