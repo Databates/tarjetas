@@ -1,0 +1,14 @@
+As a user I want to be able to select a deck from decks so that I can play a round.
+
+As  a user I want to be able to see a question so that I can make a guess.
+
+As a user I want to be able to make a guess so that I can find out if its correct.
+
+As a user I want to be able to see how many correct answers I have so that I can see my progress.
+
+As a user I want to be able to stop and start over.
+
+As a user I want to be able to log-in / log out so that I can see my account/ profile.
+
+As a user I want to be able to see my completed rounds.
+

@@ -56,10 +56,24 @@ h2 {
 .signin {
   line-height: 100px;
   float: right;
+  vertical-align: middle;
 }
+
+
 
 .signin .buttons input {
  color: white;
  border: none;
  background: none;
+}
+
+.card {
+  display: table-cell;
+  vertical-align: middle;
+  width: 600px;
+  height: 400px;
+  background: beige;
+  text-align: center;
+  font-size: 4em;
+  color: #999;
 }

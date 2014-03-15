@@ -14,8 +14,8 @@ def self.create_deck(deck_id)
   end
 
   def check_answer(guess)
-    if answer.downcase == guess.downcase
-      return 1
+    if self.answer.downcase == guess.downcase
+      score += 1
     elsif guess == ""
       return 0
     else
