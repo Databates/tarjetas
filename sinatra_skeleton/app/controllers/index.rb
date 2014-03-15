@@ -6,8 +6,8 @@ get '/' do
 end
 
 post "/round" do
-  @deck_id = Deck.find_by_name(params[:name]).id
-  @cards = Card.where(deck_id: @deck_id)
-  @round = Round.create
+  @deck = Deck.find_by_name(params[:name])
+  @cards = Card.where(deck_id: @deck.id)
+  @round = Round.create(deck_id: @deck.id)
   erb :round
 end

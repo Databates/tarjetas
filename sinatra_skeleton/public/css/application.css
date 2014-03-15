@@ -8,6 +8,18 @@ h2 {
   text-align: center;
 }
 
+h2.title {
+  text-align: left;
+}
+
+h2.title span.highlight {
+  color: #006699;
+}
+
+h2.title span.round {
+  float: right;
+}
+
 .header {
   width:100%;
   position: fixed;
@@ -31,6 +43,14 @@ h2 {
   float: left;
 }
 
+.content {
+  margin-top: 140px;
+}
+
+.title {
+  text-align: center;
+}
+
 .decks {
   position: relative;
   top:200px;
@@ -40,11 +60,12 @@ h2 {
   margin-top: 50px;
 }
 
-.decks form input {
+.button {
   display: block;
   border: none;
   padding: 10px 30px;
   margin: 20px auto;
+  height: 60px;
   color: white;
   background: -webkit-linear-gradient(#006699,#00476B );
   box-shadow: 2px 2px 6px #aaa;
@@ -53,13 +74,16 @@ h2 {
   border-radius: 40px;
 }
 
+#guess-box .button {
+  display: inline-block;
+  float: right;
+}
+
 .signin {
   line-height: 100px;
   float: right;
   vertical-align: middle;
 }
-
-
 
 .signin .buttons input {
  color: white;
@@ -67,13 +91,42 @@ h2 {
  background: none;
 }
 
-.card {
+.card .container {
   display: table-cell;
   vertical-align: middle;
-  width: 600px;
-  height: 400px;
+  width: 720px;
+  height: 480px;
+  box-shadow: 2px 2px 0 #ddd; 
   background: beige;
   text-align: center;
   font-size: 4em;
   color: #999;
+}
+
+.card {
+  width: 720px;
+  margin: 0 auto;
+  z-index: 2;
+}
+
+#guess-box {
+  width:100%;
+  margin: 0 auto;
+}
+
+#guess-box form {
+  width: 720px;
+  margin: 0 auto;
+}
+
+
+#guess input.field {
+  border-radius: 30px;
+  width: 400px;
+  height: 60px;
+  margin: 20px auto 0;
+  padding-left: 20px;
+  color: #ddd;
+  font-size: 2em;
+  display: inline-block;
 }
