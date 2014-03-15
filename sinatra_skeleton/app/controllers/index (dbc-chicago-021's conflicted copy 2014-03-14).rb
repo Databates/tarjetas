@@ -9,7 +9,6 @@ end
 
 
 
-#
 
 #send card to module
   get '/send_card' do
