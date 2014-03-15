@@ -8,6 +8,6 @@ end
 post "/round" do
   @deck_id = Deck.find_by_name(params[:name]).id
   @cards = Card.where(deck_id: @deck_id)
-  return "cheese"
+  return @cards.first.question
   erb :round
 end
